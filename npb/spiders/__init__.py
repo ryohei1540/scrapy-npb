@@ -73,8 +73,7 @@ class Batter(Player):
                           .extract_first())
         if total_games < Player.AT_LEAST_GAMES_FOR_BATTER:
             return True
-        else:
-            return False
+        return False
 
     def begin_setting_stat(self, response, stat):
         jobs = response.xpath("//table[@class='ind1'][1]/tr")
@@ -170,8 +169,7 @@ class Pitcher(Player):
                           .extract_first())
         if total_games < Player.AT_LEAST_GAMES_FOR_PITCHER:
             return True
-        else:
-            return False
+        return False
 
     def begin_setting_stat(self, response, stat):
         jobs = response.xpath("//table[@class='ind1'][1]/tr")
